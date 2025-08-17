@@ -1,0 +1,56 @@
+body {
+    height: 500px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 200px;
+    height: 70px;
+    background-image: linear-gradient(#000);
+    color: #fff;
+    border: 5px #161616 solid ;
+    border-radius: 35px;
+   /*argin-top: 200px;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.btn p {
+    z-index: 5;
+}
+
+.btn::after {
+    content: "";
+    width: 110%;
+    height: 130%;
+    background-image: linear-gradient(to bottom right, #464fff, #ae26ed);
+    border-radius: 35px;
+    position: absolute; 
+    filter: blur(4px);
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+/*.btn::before {
+    content: "";
+    width: 110%;
+    height: 130%;
+    background-image: linear-gradient(to bottom right, #464fff, #ae26ed);
+    border-radius: 35px;
+    position: absolute; 
+    z-index: -3 ;
+}*/
+
+.btn:hover::after {
+    filter: blur(0px);
+}
+
+.btn:hover {
+    background-image: linear-gradient(to bottom right, #464fff, #ae26ed); ;
+}
