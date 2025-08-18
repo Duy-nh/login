@@ -19,7 +19,7 @@ mongoose.connect(mongoURI)
     .catch(err => console.error(err));
 
 // ====== MIDDLEWARE ======
-app.use(cors({ origin: "http://localhost:5000", credentials: true })); // cho phép frontend React
+app.use(cors({ origin: ["http://localhost:5000", "login.ejs"], credentials: true })); // cho phép frontend React
 app.use(express.json());
 
 app.use(session({
@@ -60,6 +60,10 @@ passport.use(new GoogleStrategy({
 }));
 
 // ====== ROUTES ======
+// Home page
+app.get('/', (req, res) => {
+    res.render('homepage', { title: 'Home Page' });
+});
 // Login
 app.get('/login', (req, res) => {
     res.render('login', { title: 'Login Page' });
