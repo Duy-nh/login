@@ -19,7 +19,7 @@ mongoose.connect(mongoURI)
     .catch(err => console.error(err));
 
 // ====== MIDDLEWARE ======
-app.use(cors({ origin: ["http://localhost:5000", "login.ejs"], credentials: true })); // cho phép frontend React
+app.use(cors({ origin: ["https://login-1bfe.onrender.com", "login.ejs"], credentials: true })); // cho phép frontend React
 app.use(express.json());
 
 app.use(session({
@@ -46,7 +46,7 @@ passport.deserializeUser((id, done) => {
 passport.use(new GoogleStrategy({
     clientID: googleClientID,
     clientSecret: googleClientSecret,
-    callbackURL: "http://localhost:5000/auth/google/callback"
+    callbackURL: "https://login-1bfe.onrender.com/auth/google/callback"
 }, async (accessToken, refreshToken, profile, done) => {
     let user = await User.findOne({ googleId: profile.id });
     if (!user) {
