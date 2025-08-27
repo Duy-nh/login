@@ -12,18 +12,20 @@ body {
 nav {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
 
 .link_container {
     position: absolute;
-    left: 410px;
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 .logo {
-    height: 40px;
+    height: 35px;
+    flex: 1;
 }
 
 nav a {
