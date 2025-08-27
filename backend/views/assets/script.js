@@ -13,3 +13,12 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const data = await res.json();
     alert(data.message);
 });
+
+document.getElementById("pw_visibility").addEventListener("change", (e) => {
+    const pwField = document.getElementById("password");
+    if (e.target.checked) {
+        pwField.type = "text";
+    } else {
+        pwField.type = "password";
+    }
+});

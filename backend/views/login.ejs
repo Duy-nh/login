@@ -5,21 +5,56 @@
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<div class="login-container">
-    <h2>Đăng nhập</h2>
-    <form id="loginForm">
-        <input type="text" id="username" placeholder="Tài khoản" required>
-        <input type="password" id="password" placeholder="Mật khẩu" required>
-        <button type="submit">Đăng nhập</button>
-    </form>
+    <nav>
+        <a href="/"><img src=".\img\mdv.PNG" class="logo"></a>
+        <div class="link_container">
+            <a href="/">Trang chủ</a>
+            <a href="#community">Cộng đồng</a>
+            <a href="#profile">Hồ sơ y tế</a>
+            <a href="#tuvan">Tư vấn</a>
+            <a href="#contact">Liên hệ</a>
+        </div>
+    </nav>
+    <div class="login-container">
+        <h1>Đăng nhập</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Tài khoản" required>
+            <input type="password" id="password" placeholder="Mật khẩu" required>
+            <div class="pw_toggle">
+                <input type="checkbox" id="pw_visibility">
+                <label for="pw_visibility">Hiện mật khẩu</label>
+            </div>
+            <button type="submit" class="si_btn">Đăng nhập</button>
+        </form>
 
-    <hr>
+        <hr>
 
-    <a href="https://login-1bfe.onrender.com/auth/google">
-        <button class="google-btn">Đăng nhập với Google</button>
-    </a>
-</div>
+        <a href="https://login-1bfe.onrender.com/auth/google">
+            <button class="google-btn"><img src=".\img\gg_logo.png" class="gglogo">Đăng nhập với Google</button>
+        </a>
 
+        <a href="/">
+            <button class="guess_btn">Đăng nhập với tư cách khách</button>
+        </a>
+    </div>
+
+    <footer>
+        <div class="intro">
+            <h3>MEDIVERSE</h3>
+            <p class="ft_txt">Mediverse là nền tảng y tế trực tuyến giups liên kết y bác sĩ, bệnh nhân và cộng đồng
+                để chăm sóc sức khỏe toàn diện.
+            </p>
+        </div>
+        <div class="contact">
+            <h3>Liên hệ</h3>
+            <p class="ft_txt">0123456789</p>
+        </div>
+        <div class="social-media">
+            <p class="ft_txt">fb</p>
+            <p class="ft_txt">ig</p>
+            <p class="ft_txt">yt</p>
+        </div>
+    </footer>
 <script src="assets/script.js"></script>
 </body>
 </html>
